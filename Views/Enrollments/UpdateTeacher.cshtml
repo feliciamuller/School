@@ -1,0 +1,23 @@
+﻿@model School.Models.StudentTeacherViewModel
+<h2>Uppdatera lärare i Programmering 1</h2>
+
+<div>
+    <form asp-action="UpdateTeacher" method="post">
+        <select name="FKStudentId" class="form-control" style="width: 200px">
+                <option value="">Välj elev</option>
+                @foreach(var student in Model.Enrollments)
+                {
+                    <option value="@student.FKStudentId">@student.Student.StudentName</option>
+                }
+            </select>
+        <select name="selectedTeacher" class="form-control" style="width: 200px; margin-top: 15px;">
+                <option value="">Välj lärare</option>
+                @foreach (var teacher in Model.Teachers)
+                {
+                    <option value="@teacher.TeacherId">@teacher.TeacherName</option>
+                }   
+            </select>
+        <button type="submit" class="btn btn-primary" style="margin-top: 15px">Spara</button>
+    </form>
+</div>
+  

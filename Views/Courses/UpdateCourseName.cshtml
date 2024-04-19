@@ -1,0 +1,10 @@
+﻿@model School.Models.Course
+
+<h2>Uppdatera kursnamn för Programmering 2</h2>
+<div>
+    <form asp-action="UpdateCourseName" method="post">
+        <input asp-for="CourseName" class="form-control" style="width: 200px"/>
+        <button type="submit" class="btn btn-primary" style="margin-top: 15px">Spara</button>
+    </form>
+</div>
+ 

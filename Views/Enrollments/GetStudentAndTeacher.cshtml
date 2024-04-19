@@ -1,0 +1,18 @@
+﻿@model IEnumerable<School.Models.Enrollment>
+
+<h2>Alla elever med deras lärare</h2>
+<table class="table">
+    <thead>
+        <th>Elev</th>
+        <th>Lärare</th>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Student.StudentName</td>
+                <td>@item.Teacher.TeacherName</td>
+            </tr>
+        }
+    </tbody>
+</table>

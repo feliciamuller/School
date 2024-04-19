@@ -1,0 +1,18 @@
+﻿@model IEnumerable<School.Models.Course>
+
+<h2>Alla kurser</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kurser</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CourseName</td>
+            </tr>
+        }
+    </tbody>
+</table>
